@@ -1,12 +1,15 @@
 <template>
   <div class="home">
     <h1>Warzone Stats</h1>
-    <b-container >
+    <b-container>
       <b-row>
         <b-col class="border border-dark"
-          ><h3>LVL : {{ wzstats.level }}</h3></b-col
+          ><h3>Level : {{ wzstats.level }}</h3></b-col
         >
-        <b-col class="border border-dark"><h3>Season Pass : </h3></b-col>
+
+        <b-col class="border border-dark"
+          ><h3>KD Ratio : {{ wzstats.lifetime.all.properties.kdRatio }}</h3></b-col
+        >
       </b-row>
       <b-row>
         <b-col class="border border-dark"
@@ -57,7 +60,7 @@
       <b-row>
         <b-col class="border border-dark"
           ><h3>
-            suicides : {{ wzstats.lifetime.accoladeData.properties.suicides }}
+            suicides : {{ wzstats.lifetime.all.properties.suicides }}
           </h3></b-col
         >
         <b-col class="border border-dark"
@@ -100,6 +103,14 @@ export default {
       const response = await axios.request(options);
       this.wzstats = response.data;
       console.log(this.wzstats);
+    },
+  },
+  computed: {
+    average: function() {
+      let averagekd = 0;
+      return (averagekd =
+        wzstats.lifetime.all.properties.kills /
+        wzstats.lifetime.all.properties.death);
     },
   },
 };

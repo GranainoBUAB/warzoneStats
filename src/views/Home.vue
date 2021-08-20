@@ -11,14 +11,7 @@
           ><h3>KD Ratio : {{ wzstats.lifetime.all.properties.kdRatio }}</h3></b-col
         >
       </b-row>
-      <b-row>
-        <b-col class="border border-dark"
-          ><h3>levelXpRemainder : {{ wzstats.levelXpRemainder }}</h3></b-col
-        >
-        <b-col class="border border-dark"
-          ><h3>levelXpGained : {{ wzstats.levelXpGained }}</h3></b-col
-        >
-      </b-row>
+     
       <b-row>
         <b-col class="border border-dark"
           ><h3>kills : {{ wzstats.lifetime.all.properties.kills }}</h3></b-col
@@ -27,22 +20,14 @@
           <h3>deaths : {{ wzstats.lifetime.all.properties.deaths }}</h3></b-col
         >
       </b-row>
-      <b-row>
-        <b-col class="border border-dark"
-          ><h3>totalXp : {{ wzstats.totalXp }}</h3></b-col
-        >
-        <b-col class="border border-dark"
-          ><h3>prestige : {{ wzstats.prestige }}</h3></b-col
-        >
-      </b-row>
+      
       <b-row>
         <b-col class="border border-dark"
           ><h3>score : {{ wzstats.lifetime.all.properties.score }}</h3></b-col
         >
         <b-col class="border border-dark"
           ><h3>
-            timePlayedTotal :
-            {{ wzstats.lifetime.all.properties.timePlayedTotal }}
+            prestige : {{ wzstats.prestige }}
           </h3></b-col
         >
       </b-row>
